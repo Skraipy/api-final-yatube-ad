@@ -18,7 +18,12 @@ urlpatterns = [
     path(
         'v1/posts/<int:post_id>/comments/<int:pk>/',
         CommentViewSet.as_view(
-            {'get': 'retrieve', 'put': 'update', 'patch': 'partial_update', 'delete': 'destroy'}
+            {
+                'get': 'retrieve',
+                'put': 'update',
+                'patch': 'partial_update',
+                'delete': 'destroy'
+            }
         ),
         name='comment-detail'
     ),
